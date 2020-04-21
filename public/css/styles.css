@@ -1,7 +1,7 @@
 body {
   color: #333333;
   font-family: arial;
-  max-width: 650px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 0 16px;
 
@@ -63,15 +63,11 @@ header a {
   margin-right: 16px;
 }
 
-.data {
-  margin-top: 32px;
-  font-size: 22px;
-}
-
 .location {
   font-size: 30px;
+  margin-bottom: 32px;
 }
 
-.label {
-  margin-top: 16px;
+.forecast {
+  font-size: 24px;
 }

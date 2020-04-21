@@ -36,15 +36,21 @@ const getWeatherByLocation = async (address) => {
         data: undefined,
       };
     } else {
-      const { temperature, feelslike } = weatherData.data;
-      console.log(
-        `In ${location}, latitude: ${latitude}, longitude: ${longitude} is ${temperature} degrees and it feels like ${feelslike} degrees`
-      );
+      const {
+        localtime,
+        utc_offset,
+        temperature,
+        feelslike,
+      } = weatherData.data;
 
       return {
         error: undefined,
         data: {
           location,
+          latitude,
+          longitude,
+          localtime,
+          utc_offset,
           temperature,
           feelslike,
         },
