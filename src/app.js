@@ -1,12 +1,12 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
-const request = require('request');
 
 const getWeatherByLocation = require('./utils/getWeather');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const author = 'Alejandro Sánchez';
 
 // Define paths for Express config
 const publicFolder = path.join(__dirname, '../public');
@@ -24,7 +24,7 @@ app.use(express.static(publicFolder));
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather App',
-    name: 'Ale',
+    name: author,
   });
 });
 
@@ -32,7 +32,7 @@ app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About',
     img: '/images/cat.png',
-    name: 'Ale',
+    name: author,
   });
 });
 
@@ -40,7 +40,7 @@ app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
     message: 'Placeholder for help page',
-    name: 'Ale',
+    name: author,
   });
 });
 
